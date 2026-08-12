@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Qual Herói Você Seria?</title>
+  
+  <!-- Google Fonts - Estilo Quadrinhos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ===== TELA INICIAL ===== -->
+    <div id="start-screen">
+      <h1 class="comic-title">QUAL HERÓI<br>VOCÊ SERIA?</h1>
+      <p class="subtitle">Descubra seu super-alter ego!</p>
+      
+      <div class="speech-bubble">
+        Responda 8 perguntas rápidas e descubra qual herói dos quadrinhos combina mais com a sua personalidade. Pronto para a ação?
+      </div>
+      
+      <br>
+      <button class="btn btn-primary" onclick="startQuiz()">COMEÇAR QUIZ ⚡</button>
+    </div>
+
+    <!-- ===== TELA DO QUIZ ===== -->
+    <div id="quiz-screen">
+      <div class="progress-container">
+        <div class="progress-bar" id="progress"></div>
+      </div>
+      
+      <div class="question-number" id="q-number">Pergunta 1 de 8</div>
+      <div class="question-text" id="question-text"></div>
+      <div class="options" id="options"></div>
+    </div>
+
+    <!-- ===== TELA DE RESULTADO ===== -->
+    <div id="result-screen">
+      <div class="result-card">
+        <div class="hero-emoji" id="hero-emoji">🦸</div>
+        <div class="hero-name" id="hero-name">Homem-Aranha</div>
+        <div class="hero-tagline" id="hero-tagline">"Com grandes poderes vêm grandes responsabilidades"</div>
+        <div class="match-percent" id="match-percent">Você é 87% este herói!</div>
+        
+        <div class="hero-desc" id="hero-desc"></div>
+        
+        <div class="powers-title">Seus poderes principais</div>
+        <div class="powers-list" id="powers-list"></div>
+        
+        <button class="btn btn-primary" onclick="restartQuiz()">FAZER DE NOVO</button>
+        <br>
+        <button class="btn btn-secondary" onclick="shareResult()">COMPARTILHAR RESULTADO</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
